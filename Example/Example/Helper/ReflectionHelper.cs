@@ -1,13 +1,13 @@
 ﻿namespace Example.Helper
 {
-    public class ReflectionHelper
+    public static class ReflectionHelper
     {
         #region Mapping [ 物件對應 ]
         /// <summary>物件對應</summary>
         /// <param name="T">輸出目標</param>
         /// <param name="U">來源</param>
         /// <returns>輸出目標</returns>
-        public T Mapping<T, U>(U source) where T : new() where U : class
+        public static T Mapping<T, U>(this U source) where T : new() where U : class
         {
             var target = new T();
 
